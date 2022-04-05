@@ -1,0 +1,111 @@
+<!doctype html>
+<!-- 
+	tthelper v1.0 - https://github.com/tylxr59/tthelper
+	Licensed w/ MIT License (see LICENSE for full text)
+	
+	Utilizes Bootstrap v5.1.3 - https://github.com/twbs/bootstrap
+	Theme by Bootswatch - https://github.com/thomaspark/bootswatch/
+	Both also licensed under the MIT License
+-->
+<html lang="en" class="h-100">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="title" content="Ticket Helper">
+		<meta name="description" content="Bootstrap'd trouble ticket helper for people in tech support">
+		<meta name="author" content="https://github.com/tylxr59/tthelper">
+
+
+		<title>Ticket Helper</title>
+		<link rel="icon" href="favicon.ico">
+		<meta name="theme-color" content="#2C4889">
+
+		<link href="bootstrap.min.css" rel="stylesheet">
+
+		<style>
+			// Minor CSS tweaks to make everything fit neatly in Firefox @ 1080p
+			main > .container {
+				padding: 15px 15px 0;
+			}
+			#input4 {
+				height:320px;
+			}
+			#input5 {
+				height:200px;
+			}
+		</style>
+	</head>
+	<body class="d-flex flex-column h-100">
+		<main class="flex-shrink-0">
+			<div class="container">
+
+				<label for="input1" class="form-label">Caller Name</label>
+				<div class="input-group mb-3">
+					<input type="text" class="form-control input-sm" id="input1" aria-describedby="input1Addon">
+					<span class="input-group-text" id="input1Addon"><a href="#" onClick="copy('input1');">Copy</a></span>
+				</div>
+				
+				<label for="input2" class="form-label">Call Back Number</label>
+				<div class="input-group mb-3">
+					<input type="text" class="form-control input-sm" id="input2" aria-describedby="input2Addon">
+					<span class="input-group-text" id="input2Addon"><a href="#" onClick="copy('input2');">Copy</a></span>
+				</div>
+				
+				<label for="input3" class="form-label">Account/Ticket/Agreement Number</label>
+				<div class="input-group mb-3">
+					<input type="text" class="form-control input-sm" id="input3" aria-describedby="input3Addon">
+					<span class="input-group-text" id="input3Addon"><a href="#" onClick="copy('input3');">Copy</a></span>
+				</div>
+				
+				<label for="input4" class="form-label">Description of Issue</label>
+				<div class="input-group mb-3">
+					<textarea type="text" class="form-control input-sm" id="input4" aria-describedby="input4Addon"></textarea>
+					<span class="input-group-text" id="input4Addon"><a href="#" onClick="copy('input4');">Copy</a></span>
+				</div>
+				
+				<label for="input5" class="form-label">Additional Info</label>
+				<div class="input-group mb-3">
+					<textarea type="text" class="form-control input-sm" id="input5" aria-describedby="input5Addon"></textarea>
+					<span class="input-group-text" id="input5Addon"><a href="#" onClick="copy('input5');">Copy</a></span>
+				</div>
+
+				<div class="text-center">
+					<button type="button" class="btn btn-dark" onClick="clearAll();">Clear All</button>
+					<button type="button" class="btn btn-primary" onClick="copyAll();">Copy All</button>
+				</div>
+				<textarea id="hiddenFormatArea" style="visibility:hidden;position:fixed;top:0;left:0;" width="1px" height="1px"></textarea>
+
+			</div>
+		</main>
+
+
+		<script>
+			function copy(x) {
+				var content = document.getElementById(x);
+				content.select();
+				document.execCommand('copy');
+			}
+			
+			// Drops everything into hiddenFormatArea in the format commonly used at my employer
+			function copyAll() {
+				document.getElementById("hiddenFormatArea").style.visibility = "visible"; // Makes it visible so we can use the textarea
+				document.getElementById('hiddenFormatArea').value = "POC: " + document.getElementById('input1').value + "\n" +
+				"CBN: " + document.getElementById('input2').value + "\n\n" +
+				document.getElementById('input4').value;
+				
+				// Copies and then re-hides the textarea
+				document.getElementById('hiddenFormatArea').select();
+				document.execCommand('copy');
+				document.getElementById("hiddenFormatArea").style.visibility = "hidden";
+			}
+
+			function clearAll() {
+				document.getElementById('input1').value = "";
+				document.getElementById('input2').value = "";
+				document.getElementById('input3').value = "";
+				document.getElementById('input4').value = "";
+				document.getElementById('input5').value = "";
+			}
+		</script>
+	</body>
+</html>

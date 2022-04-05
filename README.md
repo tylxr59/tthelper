@@ -1,2 +1,2 @@
 # tthelper
-Bootstrap'd ticket helper for people in tech support
+Bootstrap'd trouble ticket helper for people in tech support
