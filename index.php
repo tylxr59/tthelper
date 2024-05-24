@@ -13,7 +13,7 @@
 	CSS framework based off a highly modified Bootstrap - https://github.com/twbs/bootstrap
 	Also licensed under the MIT License
 -->
-<html lang="en" class="h-100" data-tt-theme="<?PHP echo $theme; ?>">
+<html lang="en" data-tt-theme="<?PHP echo $theme; ?>">
 
 <head>
 	<meta charset="utf-8">
@@ -33,6 +33,7 @@
 			--tt-body-font-weight: 400;
 			--tt-body-line-height: 1.5;
 			--tt-body-color: #212529;
+			--tt-input-color: #212529;
 			--tt-body-bg: #fff;
 			--tt-tertiary-bg: #f8f9fa;
 			--tt-link-color: #0d6efd;
@@ -87,6 +88,7 @@
 			--tt-body-font-weight: 400;
 			--tt-body-line-height: 1.5;
 			--tt-body-color: #dee2e6;
+			--tt-input-color: #dee2e6;
 			--tt-body-bg: #212529;
 			--tt-tertiary-bg: #2b3035;
 			--tt-link-color: #6ea8fe;
@@ -140,6 +142,7 @@
 			--tt-body-font-weight: 400;
 			--tt-body-line-height: 1.5;
 			--tt-body-color: #fdf9f3;
+			--tt-input-color: #fdf9f3;
 			--tt-body-bg: #262626;
 			--tt-tertiary-bg: #5b5b5b;
 			--tt-link-color: #B9ADF5;
@@ -179,6 +182,106 @@
 			--tt-btn-copy-hover-border-color: #eee;
 			--tt-btn-copy-active-bg: #565e64;
 			--tt-btn-copy-active-color: #fff;
+			--tt-btn-copy-active-border-color: #51585e;
+		}
+
+		[data-tt-theme=monokai] {
+			color-scheme: dark;
+			--tt-body-font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+			--tt-body-font-size: 1rem;
+			--tt-body-font-weight: 400;
+			--tt-body-line-height: 1.5;
+			--tt-body-color: #ffd866;
+			--tt-input-color: #ffd866;
+			--tt-body-bg: #2c292d;
+			--tt-tertiary-bg: #5b5b5b;
+			--tt-link-color: #a9dc76;
+			--tt-link-decoration: none;
+			--tt-border-width: 1px;
+			--tt-border-style: solid;
+			--tt-border-color: #5b5b5b;
+			--tt-border-radius: 0.375rem;
+			--tt-btn-color: #fff;
+			--tt-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+
+			--tt-btn-clear-bg: #fc9867;
+			--tt-btn-clear-color: #2c292d;
+			--tt-btn-clear-border-color: #fc9867;
+			--tt-btn-clear-hover-bg: #af6947;
+			--tt-btn-clear-hover-color: #2c292d;
+			--tt-btn-clear-hover-border-color: #af6947;
+			--tt-btn-clear-active-bg: #565e64;
+			--tt-btn-clear-active-color: #2c292d;
+			--tt-btn-clear-active-border-color: #51585e;
+
+			--tt-btn-dsp-bg: #ff6188;
+			--tt-btn-dsp-color: #2c292d;
+			--tt-btn-dsp-border-color: #ff6188;
+			--tt-btn-dsp-hover-bg: #b2435f;
+			--tt-btn-dsp-hover-color: #2c292d;
+			--tt-btn-dsp-hover-border-color: #b2435f;
+			--tt-btn-dsp-active-bg: #565e64;
+			--tt-btn-dsp-active-color: #2c292d;
+			--tt-btn-dsp-active-border-color: #51585e;
+
+			--tt-btn-copy-bg: #78dce8;
+			--tt-btn-copy-color: #2c292d;
+			--tt-btn-copy-border-color: #78dce8;
+			--tt-btn-copy-hover-bg: #50939b;
+			--tt-btn-copy-hover-color: #2c292d;
+			--tt-btn-copy-hover-border-color: #50939b;
+			--tt-btn-copy-active-bg: #565e64;
+			--tt-btn-copy-active-color: #2c292d;
+			--tt-btn-copy-active-border-color: #51585e;
+		}
+
+		[data-tt-theme=dracula] {
+			color-scheme: dark;
+			--tt-body-font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+			--tt-body-font-size: 1rem;
+			--tt-body-font-weight: 400;
+			--tt-body-line-height: 1.5;
+			--tt-body-color: #BD93F9;
+			--tt-input-color: #F1FA8C;
+			--tt-body-bg: #282A36;
+			--tt-tertiary-bg: #6272A4;
+			--tt-link-color: #F1FA8C;
+			--tt-link-decoration: none;
+			--tt-border-width: 1px;
+			--tt-border-style: solid;
+			--tt-border-color: #6272A4;
+			--tt-border-radius: 0.375rem;
+			--tt-btn-color: #fff;
+			--tt-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+
+			--tt-btn-clear-bg: #50FA7B;
+			--tt-btn-clear-color: #282A36;
+			--tt-btn-clear-border-color: #50FA7B;
+			--tt-btn-clear-hover-bg: #50FA7B;
+			--tt-btn-clear-hover-color: #282A36;
+			--tt-btn-clear-hover-border-color: #50FA7B;
+			--tt-btn-clear-active-bg: #565e64;
+			--tt-btn-clear-active-color: #282A36;
+			--tt-btn-clear-active-border-color: #51585e;
+
+			--tt-btn-dsp-bg: #FF79C6;
+			--tt-btn-dsp-color: #282A36;
+			--tt-btn-dsp-border-color: #FF79C6;
+			--tt-btn-dsp-hover-bg: #b2435f;
+			--tt-btn-dsp-hover-color: #282A36;
+			--tt-btn-dsp-hover-border-color: #b2435f;
+			--tt-btn-dsp-active-bg: #565e64;
+			--tt-btn-dsp-active-color: #282A36;
+			--tt-btn-dsp-active-border-color: #51585e;
+
+			--tt-btn-copy-bg: #8BE9FD;
+			--tt-btn-copy-color: #282A36;
+			--tt-btn-copy-border-color: #8BE9FD;
+			--tt-btn-copy-hover-bg: #8BE9FD;
+			--tt-btn-copy-hover-color: #282A36;
+			--tt-btn-copy-hover-border-color: #8BE9FD;
+			--tt-btn-copy-active-bg: #565e64;
+			--tt-btn-copy-active-color: #282A36;
 			--tt-btn-copy-active-border-color: #51585e;
 		}
 
@@ -311,7 +414,7 @@
 
 		.input {
 			background-color: var(--tt-body-bg);
-			color: var(--tt-body-color);
+			color: var(--tt-input-color);
 			border-top-left-radius: 0.375rem;
 			border-bottom-left-radius: 0.375rem;
 			border: var(--tt-border-width) var(--tt-border-style) var(--tt-border-color);
